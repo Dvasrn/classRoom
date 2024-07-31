@@ -1,4 +1,4 @@
-import { sheetdataProcess } from "./sheetDataProcess";
+import { SheetdataProcess } from "./sheetDataProcess";
 
 export const GoogleFech = async () => {
   const apiKey = "AIzaSyC3XlF1XE9mvdAoFaLFLwPx21o0oBVjxNk";
@@ -14,7 +14,7 @@ export const GoogleFech = async () => {
     }
     const data = await response.json();
     console.log(data.values);
-    sheetdataProcess(data.values);
+    SheetdataProcess(data.values);
     return data.values;
   } catch (error) {
     console.error("Error fetching Google Sheets data:", error);
